@@ -1,11 +1,32 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
-const Header = ({ siteTitle }) => (
+
+const Image = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      placeholderImage: file(relativePath: { eq: "header-image.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+  console.log({data});
+  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+}
+
+
+const Header = ({ siteTitle, siteDescription }) => (
   <header
     style={{
-      background: `rebeccapurple`,
+      height: 0,
+      paddingBottom: '59%',
       marginBottom: `1.45rem`,
     }}
   >
@@ -13,21 +34,16 @@ const Header = ({ siteTitle }) => (
       style={{
         margin: `0 auto`,
         maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        padding: `5rem 1.0875rem`,
+	textShadow: `#67b6d7 5px 0 30px`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
+      <h1 style={{ margin: 0  }}>
           {siteTitle}
-        </Link>
       </h1>
+      <p style={{paddingTop: '16px'}}>Mountain View Grand, October 17, 2020</p>
     </div>
+      <Image />
   </header>
 )
 

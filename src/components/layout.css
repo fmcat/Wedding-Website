@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text|Dancing+Script&display=swap');
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -7,6 +9,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Crimson Text', serif;
 }
 article,
 aside,
@@ -56,6 +59,10 @@ b,
 strong {
   font-weight: inherit;
   font-weight: bolder;
+}
+footer {
+  text-align: center;
+  padding-top: 32px;
 }
 dfn {
   font-style: italic;
@@ -200,15 +207,22 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
-  font-weight: normal;
-  word-wrap: break-word;
-  font-kerning: normal;
-  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
-  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt";
 }
+header {
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  min-height: 300px;
+}
+header .gatsby-image-wrapper {
+  position: absolute!important;
+  top: -20px;
+  left: -20px;
+  bottom: -20px;
+  right: -20px;
+  z-index: -1;
+}
+
 img {
   max-width: 100%;
   margin-left: 0;
@@ -230,8 +244,7 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Dancing Script', cursive;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
@@ -245,13 +258,12 @@ h2 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0.5rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Crimson Text', serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1.62671rem;
+  font-size: 1.5rem;
   line-height: 1.1;
 }
 h3 {
@@ -264,8 +276,7 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Crimson Text', serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
@@ -384,7 +395,7 @@ p {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 2rem;
 }
 figure {
   margin-left: 0;
@@ -619,4 +630,7 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+.gatsby-image-wrapper {
+  margin: auto;
 }

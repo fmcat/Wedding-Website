@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Amanda Erickson & Connor MacDonald`,
+    description: `Mountain View Grand, October 17, 2020`,
+    author: `Connor MacDonald`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -25,6 +25,12 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-38988923-2",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
